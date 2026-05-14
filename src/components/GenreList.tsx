@@ -9,9 +9,10 @@ import {
 import useGenres, { type Genre } from "../hooks/useGenres";
 import getCroppedImageUrl from "../services/image-url";
 interface Props {
-  onSelectGenre: (genre: Genre) => void;
+  onSelectGenre: (genre: Genre | null) => void;
+  selectedGenre: Genre | null;
 }
-const GenreList = ({ onSelectGenre }: Props) => {
+const GenreList = ({ onSelectGenre, selectedGenre }: Props) => {
   const { data, isLoading, error } = useGenres();
   if (error) return null;
   if (isLoading) return <Spinner />;
@@ -27,10 +28,15 @@ const GenreList = ({ onSelectGenre }: Props) => {
               boxSize="32px"
             />
             <Button
-              onClick={() => onSelectGenre(d)}
+              onClick={() =>
+                selectedGenre?.id === d.id
+                  ? onSelectGenre(null)
+                  : onSelectGenre(d)
+              }
               variant="link"
               fontSize="lg"
               overflow="unset"
+              fontWeight={selectedGenre?.id === d.id ? "bold" : "normal"}
             >
               {d.name}
             </Button>
