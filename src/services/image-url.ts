@@ -1,5 +1,6 @@
+import noImage from "../assets/placeHolderImage.svg";
 const getCroppedImageUrl = (url: string) => {
-  if (!url) return "";
+  if (!url) return noImage;
   const target = "media/";
   let index = url.indexOf(target);
   if (index === -1) {
