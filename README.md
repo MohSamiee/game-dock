@@ -1,75 +1,210 @@
-# React + TypeScript + Vite
+<h1>🎮 GameDock</h1>
+A modern game discovery web app built with React, TypeScript, and Vite.
+GameDock lets users browse and discover video games by genre, platform, popularity, and search queries using real-time data from the RAWG API.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+</br>
+</br>
+</br>
 
-Currently, two official plugins are available:
+<h2>🌐 Live Demo</h2>
+<a target="_blank" href="https://game-hub-sandy-six.vercel.app">Live Demo on Vercel</a>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+</br>
+</br>
+</br>
 
-## React Compiler
+<h2>📁 Source Code</h2>
+<a target="_blank" href="https://github.com/MohSamiee/game-dock">Source Code</a>
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+</br>
+</br>
+</br>
 
-Note: This will impact Vite dev & build performances.
+<h2>✨ Features</h2>
+<ul>
+        <li>🎮 Browse games by genre</li>
+        <li>💻 Filter games by platform</li>
+        <li>🔍 Search games by title</li>
+        <li>🏆 Critic score indicators</li>
+        <li>🌗 Dark / Light mode</li>
+        <li>⚡ Smooth animations and transitions</li>
+        <li>📱 Fully responsive design</li>
+        <li>⏳ Skeleton loading states</li>
+        <li>🎯 Clean and modern UI</li>
+</ul>
 
-## Expanding the ESLint configuration
+</br>
+</br>
+</br>
+        
+<h2>🧰 Tech Stack</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Technology</th>
+      <th>Purpose</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>React 18</td>
+      <td>Frontend library</td>
+    </tr>
+    <tr>
+      <td>TypeScript</td>
+      <td>Type safety</td>
+    </tr>
+    <tr>
+      <td>Vite</td>
+      <td>Fast build tool</td>
+    </tr>
+    <tr>
+      <td>Chakra UI</td>
+      <td>UI components and styling</td>
+    </tr>
+    <tr>
+      <td>Framer Motion</td>
+      <td>Animations</td>
+    </tr>
+    <tr>
+      <td>Axios</td>
+      <td>API requests</td>
+    </tr>
+    <tr>
+      <td>RAWG API</td>
+      <td>Game data source</td>
+    </tr>
+    <tr>
+      <td>Vercel</td>
+      <td>Deployment</td>
+    </tr>
+  </tbody>
+</table>
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+</br>
+</br>
+</br>
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+<h2>📸 Screenshots</h2>
+<h3>Desktop</h3>
+<details>
+  <summary>Click to see desktop screenshot</summary>
+  <image src="./screenshots/desktop.png" alt="Desktop Screenshot" />
+</details>
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+<h3>Mobile</h3>
+<details>
+  <summary>Click to see mobile screenshot</summary>
+  <image src="./screenshots/mobile.jpeg" alt="Mobile Screenshot" width="300px" />
+</details>
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+<h3>Tablet</h3>
+<details>
+  <summary>Click to see Tablet portrait screenshot</summary>
+ <image src="./screenshots/tablet.jpeg" alt="Mobile Screenshot" width="500px" />
+</details>
+
+
+<h3>Tablet Landscape</h3>
+<details>
+  <summary>Click to see Tablet landscape screenshot</summary>
+ <image src="./screenshots/tablet-landscape.jpeg" alt="Mobile Screenshot" width="700px" />
+</details>
+
+</br>
+</br>
+</br>
+
+<h2>🚀 Getting Started</h2>
+
+1. Clone the repository
+
+```bash
+git clone https://github.com/MohSamiee/game-dock.git
+cd game-dock
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. Install dependencies
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
+
+3. Create environment variables
+   Create a .env file in the project root:
+
+```bash
+VITE_RAWG_KEY=your_api_key_here
+```
+
+4. Start the development server
+
+```bash
+npm run dev
+```
+
+</br>
+</br>
+</br>
+
+<h2>📁 Project Structure</h2>
+
+```txt
+src/
+├── assets/          # Static assets
+├── components/      # Reusable UI components
+├── hooks/           # Custom React hooks
+├── services/        # API services and utilities
+├── data/            # Static data
+├── theme.ts         # Chakra UI theme configuration
+├── App.tsx          # Main application component
+└── main.tsx         # Application entry point
+```
+
+</br>
+</br>
+</br>
+
+<h2>🧠 What I Learned</h2>
+While building this project, I practiced and improved my skills in:
+
+<ul>
+  <li>Building reusable React components</li>
+  <li>Working with TypeScript in React applications</li>
+  <li>API integration and data fetching</li>
+  <li>Responsive UI design</li>
+  <li>State and component management</li>
+  <li>Creating polished loading states and animations</li>
+  <li>Structuring scalable frontend applications</li>
+</ul>
+
+</br>
+</br>
+</br>
+
+<h2>📌 Future Improvements</h2>
+Planned features and improvements:
+<ul>
+    <li>Game details page</li>
+    <li>Infinite scrolling</li>
+    <li>Advanced filtering</li>
+    <li>Favorites / wishlist system</li>
+    <li>Better search experience</li>
+    <li>Performance optimizations</li>
+    <li>Improved accessibility</li> 
+</ul>
+
+</br>
+</br>
+</br>
+
+<h2>🙌 Acknowledgements</h2>
+This project was inspired by the React learning course by Mosh Hamedani and was further customized and improved as a personal portfolio project.
+
+</br>
+</br>
+</br>
+
+<h2>📬 Feedback</h2>
+Feedback, suggestions, and contributions are always welcome.
+If you like the project, feel free to star the repository ⭐
