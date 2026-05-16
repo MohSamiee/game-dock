@@ -7,7 +7,7 @@ GameDock lets users browse and discover video games by genre, platform, populari
 </br>
 
 <h2>🌐 Live Demo</h2>
-<a target="_blank" href="https://game-hub-sandy-six.vercel.app">Live Demo on Vercel</a>
+<a target="_blank" href="https://game-dock-wine.vercel.app">Live Demo on Vercel</a>
 
 </br>
 </br>
